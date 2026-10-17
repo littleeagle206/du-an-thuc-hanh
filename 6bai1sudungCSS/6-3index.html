@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành định dạng văn bản với CSS</title>
+    <style>
+        /* Định dạng chung cho toàn trang */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            padding: 30px;
+        }
+
+        /* 1. Định dạng Tiêu đề chính */
+        h1 {
+            color: #1e3a8a;             /* Thuộc tính color: màu xanh đậm */
+            font-size: 28px;            /* Thuộc tính font-size: kích cỡ chữ */
+            text-align: center;         /* Thuộc tính text-align: căn giữa */
+            text-transform: uppercase;  /* Chuyển chữ thành in hoa */
+            letter-spacing: 1.5px;      /* Khoảng cách giữa các ký tự */
+        }
+
+        /* 2. Định dạng Tiêu đề phụ */
+        h2 {
+            color: #0f766e;
+            font-size: 20px;
+            font-style: italic;         /* Thuộc tính font-style: chữ nghiêng */
+            text-align: left;
+        }
+
+        /* 3. Định dạng Đoạn văn bản */
+        p {
+            color: #374151;             /* Màu chữ tối dễ đọc */
+            font-size: 16px;            /* Cỡ chữ thông dụng */
+            line-height: 1.6;           /* Khoảng cách giữa các dòng */
+            text-align: justify;        /* Căn đều hai lề */
+            text-indent: 30px;          /* Thuộc tính text-indent: thụt đầu dòng 30px */
+            margin-bottom: 16px;
+        }
+
+        /* 4. Đoạn trích dẫn / Ghi chú đặc biệt */
+        .quote {
+            color: #7c2d12;
+            font-style: italic;         /* In nghiêng */
+            font-size: 17px;
+            text-align: center;         /* Căn giữa */
+            text-indent: 0;             /* Không thụt đầu dòng */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tiêu đề chính -->
+    <h1>Bài Thực Hành Định Dạng Văn Bản Bằng CSS</h1>
+
+    <!-- Tiêu đề phụ -->
+    <h2>Giới thiệu về sức mạnh của CSS</h2>
+
+    <!-- Đoạn văn bản có thụt đầu dòng và căn đều -->
+    <p>
+        CSS (Cascading Style Sheets) là ngôn ngữ quy định cách hiển thị của các tài liệu HTML. Nhờ có CSS, các trang web không chỉ còn là những dòng văn bản đơn thuần mà trở nên sống động, rõ ràng và thu hút người đọc hơn rất nhiều thông qua màu sắc, kích thước và bố cục trực quan.
+    </p>
+
+    <p>
+        Khi làm việc với các khối nội dung dài, việc sử dụng các thuộc tính định dạng như căn đều lề văn bản, chỉnh khoảng cách dòng hợp lý và thụt lề đầu dòng sẽ giúp trải nghiệm đọc của người dùng được cải thiện đáng kể, mang phong cách trình bày văn bản chuyên nghiệp.
+    </p>
+
+    <!-- Đoạn văn bản có kiểu dáng nhấn mạnh -->
+    <p class="quote">
+        "Thiết kế tốt không chỉ là làm cho giao diện đẹp mắt, mà là làm cho thông điệp được truyền tải dễ dàng nhất."
+    </p>
+
+</body>
+</html>
