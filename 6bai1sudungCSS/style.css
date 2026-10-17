@@ -1,0 +1,8 @@
+/* Áp dụng kiểu dáng bằng External-style (liên kết từ file .css bên ngoài) */
+.external-title {
+    color: #10b981; /* Màu xanh lá (Emerald) */
+}
+
+.external-desc {
+    color: #6366f1; /* Màu tím chàm (Indigo) */
+}

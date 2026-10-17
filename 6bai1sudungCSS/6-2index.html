@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành 3 cách nhúng CSS</title>
+
+    <!-- PHẦN 3: Liên kết file CSS bên ngoài (External-style) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PHẦN 2: Nhúng CSS trực tiếp trong thẻ <style> ở phần <head> (Internal-style) -->
+    <style>
+        .internal-title {
+            color: #d97706; /* Màu cam hổ phách */
+        }
+
+        .internal-desc {
+            color: #0284c7; /* Màu xanh dương */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================== -->
+    <!-- PHẦN 1: Thay đổi màu sắc sử dụng Inline-style                  -->
+    <!-- (Viết trực tiếp thuộc tính style="..." ngay trong từng thẻ)    -->
+    <!-- ============================================================== -->
+    <section>
+        <h1 style="color: #dc2626;">Tiêu đề: Minh họa Inline-style</h1>
+        <p style="color: #7c3aed;">Đoạn văn này đổi màu bằng thuộc tính style viết trực tiếp trong thẻ HTML.</p>
+    </section>
+
+    <hr>
+
+    <!-- ============================================================== -->
+    <!-- PHẦN 2: Thay đổi màu sắc sử dụng Internal-style                -->
+    <!-- (Định kiểu qua thẻ <style> đặt bên trong thẻ <head>)           -->
+    <!-- ============================================================== -->
+    <section>
+        <h1 class="internal-title">Tiêu đề: Minh họa Internal-style</h1>
+        <p class="internal-desc">Đoạn văn này đổi màu thông qua class được định nghĩa trong thẻ style ở đầu trang.</p>
+    </section>
+
+    <hr>
+
+    <!-- ============================================================== -->
+    <!-- PHẦN 3: Thay đổi màu sắc sử dụng External-style                -->
+    <!-- (Định kiểu trong file style.css riêng và nhúng qua thẻ <link>) -->
+    <!-- ============================================================== -->
+    <section>
+        <h1 class="external-title">Tiêu đề: Minh họa External-style</h1>
+        <p class="external-desc">Đoạn văn này đổi màu nhờ được liên kết với file style.css tách biệt bên ngoài.</p>
+    </section>
+
+</body>
+</html>
