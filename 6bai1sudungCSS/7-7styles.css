@@ -1,0 +1,325 @@
+/* ========================================================= */
+/* 1. RESET CSS CƠ BẢN & MÔ HÌNH HỘP (BOX MODEL)            */
+/* ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #1e293b;
+    line-height: 1.5;
+    padding-top: 80px; /* Bù khoảng trống cho Header cố định */
+}
+
+/* ========================================================= */
+/* 2. MỨC TRUNG BÌNH: FIXED HEADER (CỐ ĐỊNH TRÊN CÙNG)       */
+/* ========================================================= */
+.header {
+    position: fixed; /* Ghim chặt ở đỉnh màn hình */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #0284c7; /* Màu xanh đại dương thân thiện với trẻ em */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 38px;
+}
+
+.logo-text h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.logo-text p {
+    font-size: 12px;
+    color: #e0f2fe;
+}
+
+.search-box {
+    display: flex;
+    gap: 8px;
+}
+
+.search-box input {
+    padding: 9px 15px;
+    width: 250px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box button {
+    padding: 9px 18px;
+    background-color: #f59e0b;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.search-box button:hover {
+    background-color: #d97706;
+}
+
+/* ========================================================= */
+/* 3. MỨC TRUNG BÌNH: THANH HEAD-LINK & HIỆU ỨNG HOVER       */
+/* ========================================================= */
+.head-link {
+    background-color: #0369a1;
+}
+
+.head-link ul {
+    list-style: none;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bỏ gạch chân mặc định của liên kết */
+.head-link a {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #e0f2fe;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+/* Khi rê chuột hoặc mục đang kích hoạt: Chữ bôi đậm và chuyển màu khác */
+.head-link a:hover,
+.head-link a.active {
+    background-color: #f59e0b; /* Chuyển nền màu cam nổi bật */
+    color: #ffffff;
+    font-weight: bold;         /* Text bôi đậm */
+}
+
+/* ========================================================= */
+/* 4. KHUNG BỐ CỤC CHÍNH (MAIN CONTAINER)                   */
+/* ========================================================= */
+.main-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    display: flex;
+    gap: 20px;
+}
+
+/* 4.1. LEFT CONTENT: MENU DANH SÁCH VIDEO */
+.left-content {
+    flex: 0 0 320px; /* Cố định cột danh sách rộng 320px trên màn hình lớn */
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    height: fit-content;
+}
+
+.left-content h3 {
+    font-size: 17px;
+    color: #0369a1;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #bae6fd;
+    padding-bottom: 8px;
+}
+
+.video-menu {
+    list-style: none;
+}
+
+.video-menu li {
+    margin-bottom: 12px;
+}
+
+.video-menu a {
+    display: block;
+    text-decoration: none;
+    color: #334155;
+    padding: 10px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.video-menu a strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.video-menu a span {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* Hiệu ứng khi rê chuột vào danh sách phim */
+.video-menu a:hover,
+.video-menu .active-video a {
+    background-color: #e0f2fe;
+    border-color: #0284c7;
+    color: #0369a1;
+    font-weight: bold; /* Bôi đậm chữ khi hover/active */
+}
+
+/* 4.2. RIGHT CONTENT: KHUNG VIDEO PLAYER CHÍNH */
+.right-content {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.player-block h2 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+/* Định dạng thẻ <video> */
+.video-wrapper video {
+    width: 100%;
+    max-height: 480px;
+    background-color: #000000;
+    border-radius: 8px;
+    outline: none;
+    display: block;
+}
+
+.video-info {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background-color: #f8fafc;
+    border-left: 4px solid #0284c7;
+    border-radius: 4px;
+}
+
+.video-info h3 {
+    font-size: 16px;
+    color: #0369a1;
+    margin-bottom: 6px;
+}
+
+.video-info p {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 4px;
+}
+
+/* Tỷ lệ khung hình nhúng Responsive cho thẻ <iframe> */
+.iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Tỷ lệ vàng chuẩn 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ========================================================= */
+/* 5. FOOTER (CHÂN TRANG)                                    */
+/* ========================================================= */
+.footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 35px;
+    font-size: 13px;
+}
+
+.footer strong {
+    color: #ffffff;
+}
+
+.footer p {
+    margin-bottom: 6px;
+}
+
+/* ========================================================= */
+/* 6. MỨC NÂNG CAO: RESPONSIVE WEB DESIGN (MEDIA QUERIES)    */
+/* ========================================================= */
+
+/* Màn hình máy tính bảng (Tablet: <= 900px) */
+@media screen and (max-width: 900px) {
+    .main-container {
+        flex-direction: column; /* Đổi thành 1 cột dọc: Video ở trên, Menu ở dưới */
+    }
+
+    .right-content {
+        order: 1; /* Ưu tiên đưa màn hình xem video lên trước */
+    }
+
+    .left-content {
+        order: 2;
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
+
+/* Màn hình điện thoại di động (Mobile: <= 600px) */
+@media screen and (max-width: 600px) {
+    body {
+        padding-top: 130px; /* Nới rộng khoảng đệm đỉnh vì header co lại thành 2 tầng */
+    }
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        padding: 12px 15px;
+        gap: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        flex: 1;
+        width: auto;
+    }
+
+    .head-link ul {
+        flex-wrap: wrap; /* Cho phép các mục liên kết tự ngắt xuống dòng */
+    }
+
+    .head-link a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .right-content, 
+    .left-content {
+        padding: 12px;
+    }
+}

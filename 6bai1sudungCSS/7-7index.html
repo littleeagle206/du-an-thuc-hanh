@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thế Giới Hoạt Hình Cho Bé - Audio Việt & Thuyết Minh</title>
+    <link rel="stylesheet" href="7-7styles.css">
+</head>
+<body>
+
+    <!-- 1. HEADER CỐ ĐỊNH Ở TRÊN CÙNG (FIXED HEADER) -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🎬</span>
+            <div class="logo-text">
+                <h1>HOẠT HÌNH KIDZ</h1>
+                <p>Phim Giáo Dục - Audio Thuyết Minh Tuyển Chọn</p>
+            </div>
+        </div>
+
+        <!-- Ô tìm kiếm phim theo tên -->
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm phim hoạt hình...">
+            <button type="button">Tìm kiếm</button>
+        </div>
+    </header>
+
+    <!-- 2. KHỐI HEAD-LINK: THANH ĐIỀU HƯỚNG TRANG -->
+    <nav class="head-link">
+        <ul>
+            <li><a href="#" class="active">Trang chủ</a></li>
+            <li><a href="#">Mới cập nhật</a></li>
+            <li><a href="#">Xem nhiều nhất</a></li>
+            <li><a href="#">Phim thuyết minh HD</a></li>
+            <li><a href="#">Cổ tích Việt Nam</a></li>
+            <li><a href="#">Liên hệ / Góp ý</a></li>
+        </ul>
+    </nav>
+
+    <!-- 3. KHUNG NỘI DUNG CHÍNH (CONTENT AREA) -->
+    <div class="main-container">
+
+        <!-- CỘT TRÁI (LEFT CONTENT): MENU DANH SÁCH CÁC PHIM CÓ SẴN -->
+        <aside class="left-content">
+            <h3>Danh Sách Phim Tuyển Chọn</h3>
+            <ul class="video-menu">
+                <li class="active-video">
+                    <a href="#video-player-section">
+                        <strong>1. Chú Mèo Đi Hia (Puss in Boots)</strong>
+                        <span>FullHD | Audio Việt | 1.2M lượt xem</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#video-player-section">
+                        <strong>2. Vua Sư Tử (The Lion King)</strong>
+                        <span>HD 720p | Thuyết minh | 950K lượt xem</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#video-player-section">
+                        <strong>3. Vùng Đất Linh Hồn (Spirited Away)</strong>
+                        <span>FullHD | Lồng tiếng | 2.1M lượt xem</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#video-player-section">
+                        <strong>4. Doremon: Chú Khủng Long Mới</strong>
+                        <span>FullHD | Audio Việt | 3.5M lượt xem</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#video-player-section">
+                        <strong>5. Tom và Jerry: Những Cuộc Phiêu Lưu Vui Nhộn</strong>
+                        <span>HD 1080p | Không lời thoại | 5.8M lượt xem</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- CỘT PHẢI (RIGHT CONTENT): NỘI DUNG VIDEO ĐƯỢC CHỌN -->
+        <main class="right-content" id="video-player-section">
+            
+            <!-- Khu vực 1: Trình phát video chuẩn thẻ <video> từ link gốc Server -->
+            <section class="player-block">
+                <h2>1. Phim Nổi Bật (Phát Từ Server Gốc - Không Quảng Cáo)</h2>
+                <div class="video-wrapper">
+                    <video controls poster="https://picsum.photos/800/450?random=1" preload="metadata">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>Chú Mèo Đi Hia - Điều Ước Cuối Cùng (Bản Thuyết Minh Chuẩn)</h3>
+                    <p><strong>Tiêu chuẩn chất lượng:</strong> Chuẩn Full HD 1080p | <strong>Âm thanh:</strong> Audio Việt rõ tiếng, phù hợp với tâm lý lứa tuổi thiếu nhi.</p>
+                    <p>Bộ phim mang thông điệp ý nghĩa về tình bạn, lòng dũng cảm và tinh thần không bỏ cuộc trước khó khăn.</p>
+                </div>
+            </section>
+
+            <!-- Khu vực 2: Nhúng video YouTube an toàn qua thẻ <iframe> -->
+            <section class="player-block" style="margin-top: 25px;">
+                <h2>2. Video Tuyển Chọn Khác (Nhúng YouTube An Toàn)</h2>
+                <div class="iframe-wrapper">
+                    <iframe 
+                        src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- 4. CHÂN TRANG (FOOTER) -->
+    <footer class="footer">
+        <p>&copy; 2026 <strong>Kênh Hoạt Hình Thiếu Nhi An Toàn</strong>. Bản quyền nội dung thuộc về các nhà sản xuất phim.</p>
+        <p>Cam kết 100% môi trường xem phim giáo dục trong lành: Không quảng cáo xen ngang, không nội dung bạo lực.</p>
+    </footer>
+
+</body>
+</html>
