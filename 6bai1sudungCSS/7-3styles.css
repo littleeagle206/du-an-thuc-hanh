@@ -1,0 +1,60 @@
+/* 1. Thiết lập font chữ chung và xóa đệm mặc định */
+body {
+    font-family: Arial, sans-serif;
+}
+
+#menu, #menu ul, #menu li {
+    padding: 0;
+    margin: 0;
+}
+
+/* 2. Thanh bao bọc menu cấp 1 */
+#menu {
+    height: 30px;
+    background-color: #000000;
+    border: 1px solid #CDCDCD;
+}
+
+/* 3. Dàn các mục cấp 1 theo hàng ngang bằng float: left */
+#menu li {
+    position: relative;     /* Làm mốc tọa độ cho menu con absolute bên trong */
+    float: left;            /* Giúp các mục Sem 1, Sem 2,... nằm ngang cạnh nhau */
+    list-style: none;
+}
+
+/* 4. Định dạng thẻ liên kết <a> của menu cấp 1 */
+#menu li a {
+    width: 100px;
+    height: 30px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    background-color: black;
+    color: white;
+}
+
+/* 5. Định dạng riêng cho thẻ <a> bên trong menu con cấp 2 */
+#menu ul ul li a {
+    width: 200px;           /* Mở rộng bề ngang để hiển thị vừa tên môn học */
+    text-align: left;       /* Căn chữ sang lề trái */
+    padding-left: 10px;
+}
+
+/* 6. Hiệu ứng chuyển nền màu đỏ khi rê chuột (hover) */
+#menu li a:hover {
+    background-color: red;
+}
+
+/* 7. Định vị và ẩn menu con cấp 2 */
+#menu ul ul {
+    position: absolute;
+    top: 30px;              /* Đẩy menu con rơi xuống ngay dưới thanh menu chính (cao 30px) */
+    left: 0;                /* Canh thẳng hàng từ mép trái của mục cha */
+    visibility: hidden;     /* Ẩn menu con khi ở trạng thái bình thường */
+}
+
+/* 8. Hiển thị menu con khi rê chuột vào mục cha tương ứng */
+#menu ul li:hover ul {
+    visibility: visible;
+}
