@@ -1,0 +1,96 @@
+/* Thiết lập font chữ chung và màu nền giao diện đọc sách */
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background-color: #fdfbf7; /* Màu nền giấy ấm mắt, chống mỏi */
+    color: #2d3748;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Bước 4: Định dạng ảnh bìa truyện đầu trang */
+.banner-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.story-cover {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Bước 7: Định dạng font chữ, màu sắc và căn giữa cho tiêu đề truyện */
+.story-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    color: #854d0e;          /* Màu nâu vàng cổ điển */
+    text-align: center;      /* Căn giữa */
+    margin: 20px 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Bước 8: Định dạng khối mục lục (viền border, màu nền background-color, đệm padding) */
+.table-of-contents {
+    border: 1px solid #cbd5e1;
+    background-color: #f8fafc;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin-bottom: 35px;
+}
+
+/* Bước 5 & 8: Định dạng thẻ <h5> tiêu đề mục lục */
+.table-of-contents h5 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 6px;
+}
+
+.table-of-contents ul {
+    list-style-type: square;
+    margin: 0;
+    padding-left: 24px;
+}
+
+.table-of-contents li {
+    margin-bottom: 8px;
+}
+
+/* Bước 8: Hiệu ứng hover và đường gạch chân cho các liên kết mục lục */
+.table-of-contents a {
+    color: #2563eb;
+    text-decoration: none;   /* Bỏ gạch chân mặc định */
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.table-of-contents a:hover {
+    color: #b91c1c;          /* Đổi màu đỏ gạch khi rê chuột */
+    text-decoration: underline; /* Hiện gạch chân khi hover */
+}
+
+/* Tiêu đề từng chương truyện */
+.story-content h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: #9a3412;
+    margin-top: 36px;
+    margin-bottom: 14px;
+    border-left: 4px solid #f97316;
+    padding-left: 10px;
+}
+
+/* Bước 9: Canh lề, giãn dòng và thụt đầu dòng cho đoạn văn bản thân truyện */
+.story-content p {
+    font-size: 17px;
+    line-height: 1.8;        /* Giãn dòng thông thoáng, dễ đọc truyện */
+    text-align: justify;     /* Căn đều hai bên lề */
+    text-indent: 32px;       /* Thụt lề đầu dòng cho từng đoạn */
+    margin-bottom: 16px;
+}
