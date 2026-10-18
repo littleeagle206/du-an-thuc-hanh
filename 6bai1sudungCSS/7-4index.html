@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục trang web với HTML5 & CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Đầu trang -->
+        <header>
+            <h1>Trang Tin Tức & Công Nghệ</h1>
+            <p>Nền tảng chia sẻ kiến thức lập trình web hiện đại</p>
+        </header>
+
+        <!-- 2. Thanh điều hướng -->
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Bài viết</a></li>
+                <li><a href="#">Tài liệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. Khu vực thân trang chứa Cột nội dung và Cột phụ trợ -->
+        <div class="main-body">
+            <!-- Vùng nội dung chính -->
+            <section class="content-area">
+                <article class="post">
+                    <h2>Tìm hiểu Semantic HTML5</h2>
+                    <p class="post-meta">Đăng ngày: 18/10/2026 | Tác giả: Admin</p>
+                    <p>Semantic HTML giúp công cụ tìm kiếm và các thiết bị trợ năng đọc hiểu mã nguồn một cách chính xác. Thay vì chỉ dùng các thẻ div chung chung, các thẻ có ngữ nghĩa giúp cấu trúc trang web mạch lạc và chuyên nghiệp hơn rất nhiều.</p>
+                </article>
+
+                <article class="post">
+                    <h2>CSS Flexbox trong dàn trang</h2>
+                    <p class="post-meta">Đăng ngày: 17/10/2026 | Tác giả: Admin</p>
+                    <p>Flexbox mang lại giải pháp căn chỉnh, phân bổ không gian và sắp xếp các phần tử trong khung chứa một cách trực quan, giải quyết triệt để các hạn chế khi dùng float truyền thống.</p>
+                </article>
+            </section>
+
+            <!-- Cột phụ trợ (Sidebar) -->
+            <aside class="sidebar">
+                <h3>Chủ đề xem nhiều</h3>
+                <ul>
+                    <li><a href="#">Hướng dẫn HTML cơ bản</a></li>
+                    <li><a href="#">Làm chủ Box Model trong CSS</a></li>
+                    <li><a href="#">Responsive Web Design</a></li>
+                </ul>
+
+                <div class="widget">
+                    <h3>Thông báo</h3>
+                    <p>Lớp học Lập trình Web Khóa K26 sẽ khai giảng vào tuần tới!</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 4. Chân trang -->
+        <footer>
+            <p>&copy; 2026 Bản quyền thuộc về Web Developer. Thiết kế với chuẩn HTML5 & CSS3.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
