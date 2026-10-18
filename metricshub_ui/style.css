@@ -1,0 +1,167 @@
+/* ========================================================= */
+/* 1. RESET VÀ THIẾT LẬP CHUNG                               */
+/* ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+/* ========================================================= */
+/* 2. NAVBAR: 1D LAYOUT VỚI FLEXBOX                          */
+/* Linh hoạt theo nội dung (Content-first), không vỡ layout   */
+/* ========================================================= */
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 14px 24px;
+    gap: 16px;
+    flex-wrap: wrap; /* Tự động xuống dòng mềm mại trên mobile */
+}
+
+.nav-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #38bdf8;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    white-space: nowrap; /* Giữ nguyên các từ dài tiếng Đức không bị đứt gãy */
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-user .badge {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+}
+
+/* ========================================================= */
+/* 3. DASHBOARD: 2D BENTO BOX BẰNG CSS GRID                  */
+/* Phẳng hóa DOM (Shallow DOM), không lồng thẻ con vô nghĩa   */
+/* ========================================================= */
+.dashboard-section {
+    padding: 32px 0;
+}
+
+.grid-dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 140px;
+    gap: 16px; /* Thay thế margin lộn xộn */
+}
+
+.widget {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: #334155;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.widget:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Bento Box Spanning: Widget lớn trải rộng 2 hàng */
+.widget-hero {
+    grid-column: span 1;
+    grid-row: span 2;
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #ffffff;
+    border: none;
+}
+
+.widget-wide {
+    grid-column: span 2;
+    background-color: #f0f9ff;
+    border-color: #bae6fd;
+    color: #0369a1;
+}
+
+/* ========================================================= */
+/* 4. RESPONSIVE BREAKPOINTS (TABLET & MOBILE)               */
+/* ========================================================= */
+
+/* Tablet (<= 992px) */
+@media screen and (max-width: 992px) {
+    .grid-dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .widget-hero {
+        grid-column: span 2;
+        grid-row: span 1;
+        min-height: 160px;
+    }
+    .widget-wide {
+        grid-column: span 2;
+    }
+}
+
+/* Mobile (<= 576px) */
+@media screen and (max-width: 576px) {
+    .site-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-top: 10px;
+        border-top: 1px solid #1e293b;
+    }
+    .grid-dashboard {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    .widget,
+    .widget-hero,
+    .widget-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+        min-height: 120px;
+    }
+}
