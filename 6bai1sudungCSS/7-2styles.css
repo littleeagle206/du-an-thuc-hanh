@@ -1,0 +1,52 @@
+/* 1. Đặt font chữ và xóa padding, margin mặc định */
+body {
+    font-family: Arial, sans-serif;
+}
+
+#menu, #menu ul, #menu li {
+    padding: 0;
+    margin: 0;
+}
+
+/* 2. Định dạng các mục chọn chính (li) */
+#menu li {
+    list-style: none;             /* Bỏ dấu chấm tròn bullet */
+    position: relative;           /* Làm mốc tọa độ cho menu con absolute bên trong */
+    width: 100px;                 /* Cố định chiều rộng */
+    height: 30px;                /* Cố định chiều cao */
+    padding: 0 20px;              /* Khoảng cách đệm trái/phải */
+    background-color: black;      /* Màu nền đen */
+    line-height: 30px;            /* Căn giữa chữ theo chiều dọc */
+    cursor: pointer;              /* Đổi con trỏ thành hình bàn tay */
+}
+
+/* 3. Định dạng thẻ liên kết (a) bên trong mục chọn */
+#menu li a {
+    text-decoration: none;        /* Bỏ gạch chân mặc định của liên kết */
+    color: white;                 /* Màu chữ trắng */
+    display: block;               /* Mở rộng vùng bấm kín ô */
+}
+
+/* 4. Đổi màu nền khi rê chuột (hover) vào mục menu */
+#menu li:hover {
+    background-color: red;        /* Chuyển nền sang màu đỏ khi hover */
+}
+
+/* 5. Cấu hình vị trí và ẩn menu con cấp 2 */
+#menu ul ul {
+    position: absolute;
+    top: 0;
+    left: 140px;                  /* 100px width + 20px padding-left + 20px padding-right = 140px */
+    visibility: hidden;           /* Ẩn menu con khi bình thường */
+}
+
+/* 6. Hiển thị menu con khi rê chuột vào mục cha */
+#menu ul li:hover > ul {
+    visibility: visible;          /* Hiện menu con tương ứng */
+}
+
+/* Định dạng chiều rộng cho các mục trong menu con để không bị xuống dòng */
+#menu ul ul li {
+    width: 180px;                 /* Cho menu con rộng hơn để hiển thị vừa tên môn học */
+    white-space: nowrap;          /* Không cho văn bản tự động xuống dòng */
+}
