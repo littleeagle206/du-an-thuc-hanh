@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao diện Facebook thu nhỏ - Fixed Header & Sidebar</title>
+    <link rel="stylesheet" href="7-5styles.css">
+</head>
+<body>
+
+    <!-- 1. FIXED HEADER Ở TRÊN CÙNG -->
+    <header class="navbar">
+        <div class="nav-left">
+            <span class="logo">f</span>
+            <input type="text" placeholder="Tìm kiếm trên Facebook..." class="search-input">
+        </div>
+        <nav class="nav-middle">
+            <a href="#" class="nav-icon active">🏠 Trang chủ</a>
+            <a href="#" class="nav-icon">👥 Bạn bè</a>
+            <a href="#" class="nav-icon">📺 Watch</a>
+            <a href="#" class="nav-icon">🏪 Marketplace</a>
+        </nav>
+        <div class="nav-right">
+            <span class="profile-badge">Người dùng</span>
+        </div>
+    </header>
+
+    <!-- 2. KHUNG NỘI DUNG CHÍNH (CHỨA 2 SIDEBAR VÀ NEWSFEED) -->
+    <div class="app-container">
+
+        <!-- SIDEBAR TRÁI (CỐ ĐỊNH HOẶC CUỘN ĐỘC LẬP) -->
+        <aside class="sidebar sidebar-left">
+            <ul class="menu-list">
+                <li class="menu-item"><strong>👤 Trang cá nhân</strong></li>
+                <li class="menu-item">👥 Bạn bè</li>
+                <li class="menu-item">🕒 Kỷ niệm</li>
+                <li class="menu-item">🔖 Đã lưu</li>
+                <li class="menu-item">🚩 Trang</li>
+                <li class="menu-item">📅 Sự kiện</li>
+                <li class="menu-item">🎮 Chơi game</li>
+                <li class="menu-item">⚙️ Cài đặt & Quyền riêng tư</li>
+            </ul>
+        </aside>
+
+        <!-- PHẦN NỘI DUNG CHÍNH (BẢNG TIN NEWSFEED CUỘN TỰ DO) -->
+        <main class="feed">
+            <!-- Ô tạo bài viết -->
+            <div class="post create-post">
+                <input type="text" placeholder="Bạn đang nghĩ gì thế?" class="post-input">
+                <div class="post-actions">
+                    <button>📷 Ảnh/video</button>
+                    <button>👥 Gắn thẻ</button>
+                    <button>😊 Cảm xúc</button>
+                </div>
+            </div>
+
+            <!-- Bài viết 1 -->
+            <article class="post">
+                <div class="post-header">
+                    <h4>Nguyễn Văn A</h4>
+                    <span class="time">3 giờ trước</span>
+                </div>
+                <p class="post-body">Hôm nay bắt đầu thực hành thiết kế giao diện mạng xã hội với Fixed Header và Sidebar trong CSS! Giao diện lướt rất mượt mà.</p>
+                <div class="interaction-bar">
+                    <button>👍 Thích</button>
+                    <button>💬 Bình luận</button>
+                    <button>↗️ Chia sẻ</button>
+                </div>
+            </article>
+
+            <!-- Bài viết 2 -->
+            <article class="post">
+                <div class="post-header">
+                    <h4>Cộng đồng Lập trình Web</h4>
+                    <span class="time">5 giờ trước</span>
+                </div>
+                <p class="post-body">Kỹ thuật sử dụng position: fixed cho thanh Navigation giúp người dùng có thể truy cập menu điều hướng ở bất kỳ vị trí nào khi đang cuộn xem bảng tin.</p>
+                <div class="interaction-bar">
+                    <button>👍 Thích</button>
+                    <button>💬 Bình luận</button>
+                    <button>↗️ Chia sẻ</button>
+                </div>
+            </article>
+
+            <!-- Bài viết 3 -->
+            <article class="post">
+                <div class="post-header">
+                    <h4>Học viên IT</h4>
+                    <span class="time">Hôm qua</span>
+                </div>
+                <p class="post-body">Việc chia layout 3 cột: Sidebar trái (Điều hướng), Main (Bảng tin) và Sidebar phải (Người liên hệ) là bố cục kinh điển của các trang Dashboard và mạng xã hội.</p>
+                <div class="interaction-bar">
+                    <button>👍 Thích</button>
+                    <button>💬 Bình luận</button>
+                    <button>↗️ Chia sẻ</button>
+                </div>
+            </article>
+        </main>
+
+        <!-- SIDEBAR PHẢI (CỐ ĐỊNH DANH SÁCH BẠN BÈ / QUẢNG CÁO) -->
+        <aside class="sidebar sidebar-right">
+            <h3>Người liên hệ</h3>
+            <ul class="contact-list">
+                <li class="contact-item">🟢 Trần Thị B</li>
+                <li class="contact-item">🟢 Lê Văn C</li>
+                <li class="contact-item">🟢 Hoàng Minh D</li>
+                <li class="contact-item">⚪ Phạm Thu E</li>
+                <li class="contact-item">🟢 Đỗ Tuấn F</li>
+            </ul>
+        </aside>
+
+    </div>
+
+</body>
+</html>
